@@ -160,8 +160,9 @@ router.get('/', getExpensesValidators, (req, res) => {
 });
 
 /* ─── GET /expenses/categories ───────────────────────────────────────────── */
-// Returns distinct categories that exist in the DB.
-// Used by the frontend to populate the filter dropdown dynamically.
+// Returns all distinct categories that currently exist in the DB,
+// sorted alphabetically. Used by the frontend filter dropdown so it
+// only shows categories that actually have expenses — no hardcoded list.
 
 router.get('/categories', (_req, res) => {
   try {
