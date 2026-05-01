@@ -1,0 +1,42 @@
+services:
+  # ── Backend API ─────────────────────────────────────────────
+  - type: web
+    name: fenmo-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: DATA_DIR
+        value: /var/data
+      - key: ALLOWED_ORIGIN
+        fromService:
+          type: web
+          name: fenmo-frontend
+          property: host
+    disk:
+      name: fenmo-data
+      mountPath: /var/data
+      sizeGB: 1
+
+  # ── Frontend SPA ─────────────────────────────────────────────
+  - type: web
+    name: fenmo-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: fenmo-backend
+          property: host
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
