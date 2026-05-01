@@ -111,6 +111,8 @@ router.post(
 );
 
 /* ─── GET /expenses ──────────────────────────────────────────────────────── */
+// Supports optional ?category (case-insensitive) and ?sort query params.
+// Total is accumulated in integer paise to prevent floating-point drift.
 
 const getExpensesValidators = [
   query('category').optional().trim().isLength({ max: 100 }),
@@ -147,6 +149,7 @@ router.get('/', getExpensesValidators, (req, res) => {
       .all(...params);
 
     const expenses = rows.map(formatExpense);
+    // Accumulate total in paise to avoid float-point errors across many rows
     const totalPaise = rows.reduce((acc, r) => acc + r.amount_paise, 0);
 
     return res.json({ expenses, total: toRupees(totalPaise), count: expenses.length });
