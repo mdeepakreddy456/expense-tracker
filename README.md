@@ -2,8 +2,10 @@
 
 A minimal, production-quality full-stack expense tracker.
 
-**Live demo**: [Add your Render URL here after deployment]  
-**Repository**: [Add your GitHub URL here]
+**🌐 Live demo**: [https://expense-tracker-urtj.onrender.com](https://expense-tracker-urtj.onrender.com)  
+**🔌 Backend API**: [https://expense-tracker-backend-pbpl.onrender.com](https://expense-tracker-backend-pbpl.onrender.com)  
+**📦 Repository**: [https://github.com/mdeepakreddy456/expense-tracker](https://github.com/mdeepakreddy456/expense-tracker)
+
 
 ---
 
