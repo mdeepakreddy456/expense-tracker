@@ -13,7 +13,7 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-const STORAGE_KEY = 'fenmo_idempotency_key';
+const STORAGE_KEY = 'expense_tracker_idempotency_key';
 
 function getOrCreate() {
   let key = sessionStorage.getItem(STORAGE_KEY);

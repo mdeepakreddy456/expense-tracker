@@ -1,6 +1,6 @@
-# Fenmo — Frontend
+# Personal Expense Tracker — Frontend
 
-React + Vite SPA for the Fenmo personal expense tracker.
+React + Vite SPA for the personal expense tracker.
 
 ## Quick Start
 

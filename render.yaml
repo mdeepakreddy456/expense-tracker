@@ -1,7 +1,7 @@
 services:
   # ── Backend API ─────────────────────────────────────────────
   - type: web
-    name: fenmo-backend
+    name: expense-tracker-backend
     runtime: node
     rootDir: backend
     buildCommand: npm install
@@ -16,16 +16,16 @@ services:
       - key: ALLOWED_ORIGIN
         fromService:
           type: web
-          name: fenmo-frontend
+          name: expense-tracker-frontend
           property: host
     disk:
-      name: fenmo-data
+      name: expense-tracker-data
       mountPath: /var/data
       sizeGB: 1
 
   # ── Frontend SPA ─────────────────────────────────────────────
   - type: web
-    name: fenmo-frontend
+    name: expense-tracker-frontend
     runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
@@ -34,7 +34,7 @@ services:
       - key: VITE_API_URL
         fromService:
           type: web
-          name: fenmo-backend
+          name: expense-tracker-backend
           property: host
     routes:
       - type: rewrite

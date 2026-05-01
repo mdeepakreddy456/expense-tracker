@@ -1,4 +1,4 @@
-# Fenmo — Personal Expense Tracker
+# Personal Expense Tracker
 
 A minimal, production-quality full-stack expense tracker.
 
@@ -26,7 +26,7 @@ A minimal, production-quality full-stack expense tracker.
 ## Architecture
 
 ```
-fenmo/
+expense-tracker/
 ├── backend/          Express API + SQLite
 │   ├── src/
 │   │   ├── server.js          Express app setup

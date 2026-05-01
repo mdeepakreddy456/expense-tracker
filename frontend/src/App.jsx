@@ -94,7 +94,7 @@ export default function App() {
         <header className="app-header">
           <div className="logo">
             <div className="logo-icon" aria-hidden="true">₹</div>
-            <span className="logo-text">Fen<span>mo</span></span>
+            <span className="logo-text">Expense <span>Tracker</span></span>
           </div>
           <p className="header-subtitle">Personal Expense Tracker</p>
         </header>

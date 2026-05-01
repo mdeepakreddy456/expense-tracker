@@ -1,6 +1,6 @@
-# Fenmo — Backend API
+# Personal Expense Tracker — Backend API
 
-Express + SQLite REST API for the Fenmo personal expense tracker.
+Express + SQLite REST API for the personal expense tracker.
 
 **🔌 Live API**: [https://expense-tracker-backend-pbpl.onrender.com](https://expense-tracker-backend-pbpl.onrender.com)  
 **🌐 Frontend**: [https://expense-tracker-urtj.onrender.com](https://expense-tracker-urtj.onrender.com)
